@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* following line needed for bootstrap */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/*min.css for production while bootstrap.css for development */

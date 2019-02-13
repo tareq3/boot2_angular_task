@@ -1,0 +1,13 @@
+<ul class="list-group"> <!--bootstrap4 unorderd list-->
+  <li *ngFor="let task of tasks" class="list-group-item"><!--ngfor iterate tasks and get single task-->
+    <div class="task-checkbox"> <!--bootstrap checkbox-->
+      <!--change from ng for sending event to backend for checkbox selection-->
+      <input type="checkbox" class="list-child" (change)="onTaskChange($event,task)" [checked]="task.completed">
+
+      <span ngClass="{{task.completed ? 'name completed' : 'name'}} float-sm-right">{{task.name}}</span>
+      <!--Shows the dueDate in the badge and change badge color according to task completed flag -->
+      <!--float-right for move the badge to right-->
+      <span class="badge  {{getDueDateBadge(task)}} float-right ">{{task.dueDate}}</span> <!--//here second class is either badge-primary or badge-secondary-->
+    </div>
+  </li>
+</ul>

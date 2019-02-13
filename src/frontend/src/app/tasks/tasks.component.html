@@ -1,0 +1,25 @@
+<!--For emmet and css3 , Class is represented by . while Id is represented by hash-->
+<!--As we used container to the parent div we don't need to use extra container here-->
+<div class="row"> <!--bootstrap4 row for grid-->
+  <div class="col-md-2">&nbsp;</div> <!--first two col empty on more than medium screen-->
+  <div class="col-md-8"> <!--next 8 col -->
+    <div id="tasksPanel" class="panel panel-default"></div> <!--bootstrap panel create a border box -->
+    <div class="panel-heading">
+      <h3 class="panel-title">My Tasks</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row"> <!--In the panel body we are creating another grid -->
+        <div class="col-md-12"> <!--will hold all columns -->
+          <app-tasks-add></app-tasks-add> <!--for add item -->
+        </div>
+      </div>
+      <div class="row"> <!--Another grid beyond add task grid -->
+        <div class="col-md-12"><!--will hold all columns-->
+          <app-tasks-list></app-tasks-list> <!--list of tasks -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-2">&nbsp;</div> <!--left two col of the parent grid will hold space/ empty space again-->
+</div>
